@@ -1,0 +1,34 @@
+<div class="car-detail-card-wrapper">
+    <div class="brand-logo"><img src="{{selectedCar.logo}}" alt="brand" width="60" height="60"></div>
+    <div class="card-row">
+        <div class="car-title"><p>{{selectedCar.title}}</p></div>
+        <div class="car-image"><img src="{{selectedCar.imgUrl}}" alt="brand" width="484" height="240"></div>
+    </div>
+    <div class="card-row car-detail-info">
+        <app-item-select [label]="'Market status'" [data]="marketStatus" [itemValue]="'1'"></app-item-select>
+        <div class="car-data border-r-3">
+            <div class="mr-50">
+                <app-icon-text [key]="'distance'" [value]="'1,13,000 KM'"></app-icon-text>
+                <app-icon-text [key]="'place'" [value]="'Ottawa'"></app-icon-text>
+            </div>
+            <div class="mr-50">
+                <app-icon-text [key]="'temp'" [value]="'Auto'"></app-icon-text>
+                <app-icon-text [key]="'gas-station'" [value]="'Petrol'"></app-icon-text>
+            </div>
+        </div>
+        <div class="car-data ml-50">
+            <div class="mr-50">
+                <p class="info-value">{{selectedCar.seachVolumn}}</p>
+                <p class="info-label">Searched</p>
+            </div>
+            <div class="mr-50">
+                <p class="info-value">{{selectedCar.visitedCount}}</p>
+                <p class="info-label">Visited</p>
+            </div>
+            <div>
+                <p class="info-value">{{selectedCar.soldCount}}</p>
+                <p class="info-label">Sold</p>
+            </div>
+        </div>
+    </div>
+</div>

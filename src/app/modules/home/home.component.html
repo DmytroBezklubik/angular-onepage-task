@@ -1,0 +1,22 @@
+<ng-container>
+  <div class="page-location">
+    <span class="prev-location">auto.market</span>
+    <mat-icon class="arrow-right">keyboard_arrow_right</mat-icon>
+    <span class="current-location">Market status</span>
+  </div>
+  <hero-slider [carsList]="carsList"></hero-slider>
+  <app-car-detail-card [selectedCar]="selectedCar"></app-car-detail-card>
+  <div class="cars-list">
+    <div class="flex-jc-between">
+      <app-item-select [label]="'Stats of the'" [data]="weekStats" [itemValue]="'1'"></app-item-select>
+      <app-item-select [label]="'Select country'" [data]="countries" [itemValue]="'1'"></app-item-select>
+      <app-item-select [label]="'Select province'" [data]="provinces" [itemValue]="'1'"></app-item-select>
+      <app-item-select [label]="'Select city'" [data]="cities" [itemValue]="'1'"></app-item-select>
+    </div>
+    <div class="mt-50">
+      <div *ngFor="let car of carsList; let i = index;" class="my-20">
+        <app-progress-card [title]="car.brandName" [imgUrl]="car.imgUrl" [progress]="car.progress" [description]="i == 0 ? '“ Top of the last week “' : ''"></app-progress-card>
+      </div>
+    </div>
+  </div>
+</ng-container>

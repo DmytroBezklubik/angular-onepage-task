@@ -1,0 +1,12 @@
+<div class="home-wrapper">
+    <div class="menu-slider-wrapper">
+        <div class="slider-wrapper">
+            <ngx-slick-carousel class="nav-carousel slide-nav-wrapper" #slickNav [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let car of carsList" class="slide-nav" (mouseup)="onMouseUp($event)" (mousedown)="onMouseDown($event)"
+                    (mousemove)="onMouseMove($event)">
+                    <app-slider-car-card [carInfo]="car"></app-slider-car-card>
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</div>

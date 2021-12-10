@@ -1,0 +1,37 @@
+.progressbar-wrapper {
+    display: flex;
+    align-items: start;
+
+    .progress-bar {
+        width: 82%;
+
+        .car-brandname {
+            color: #5f5f5f;
+            font-size: 20px;
+        }
+
+        .flex {
+            display: flex;
+        }
+        .description {
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        mat-progress-bar {
+            height: 18px;
+            border-radius: 10px;
+            &.mat-progress-bar-buffer {
+                background-color: #fff;
+            }
+        }
+    }
+    .car-image {
+        display: flex;
+        width: 18%;
+        align-items: center;
+        justify-content: right;
+        padding-right: 20px;
+    }
+}

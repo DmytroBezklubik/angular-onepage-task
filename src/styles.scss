@@ -1,1 +1,109 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$car-market-primary: mat.define-palette(mat.$indigo-palette);
+$car-market-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$car-market-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$car-market-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $car-market-primary,
+      accent: $car-market-accent,
+      warn: $car-market-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($car-market-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+.slick-prev {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+  z-index: 1;
+}
+.slick-next {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -10px;
+  z-index: 1;
+}
+.slick-prev,
+.slick-next {
+  font-family: none;
+  font-size: 17px;
+  line-height: 2;
+  color: #FFFFFF;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #df521a;
+  box-shadow: 2px 2px 2px 1px rgba(10, 30, 25, 0.2);
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  color: #5f5f5f;
+  background-color: #ffffff;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: #ffffff;
+  background-color: #df521a;
+}
+
+.slick-prev.slick-disabled:hover,
+.slick-next.slick-disabled:hover,
+.slick-prev.slick-disabled:focus,
+.slick-next.slick-disabled:focus {
+  color: #5f5f5f;
+  background-color: #ffffff;
+}
+
+.mat-progress-bar.mat-warn .mat-progress-bar-buffer {
+  background-color: #fff;
+}
+.mat-progress-bar.mat-warn .mat-progress-bar-fill::after {
+  border-radius: 10px;
+  background-color: #df521a;
+}
+
+

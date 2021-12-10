@@ -1,0 +1,21 @@
+<div class="car-card-wrapper">
+    <div class="card-row">
+        <img src="{{carInfo.logo}}" alt="brand" width="30" height="30">
+        <img src="{{carInfo.imgUrl}}" alt="brand" width="144" height="90">
+        <p>{{carInfo.fuel}}</p>
+    </div>
+    <div class="card-row card-data">
+        <div>
+            <p class="info-label">Searched</p>
+            <p class="info-value">{{carInfo.seachVolumn}}</p>
+        </div>
+        <div>
+            <p class="info-label">Visited</p>
+            <p class="info-value">{{carInfo.visitedCount}}</p>
+        </div>
+        <div>
+            <p class="info-label">Sold</p>
+            <p class="info-value">{{carInfo.soldCount}}</p>
+        </div>
+    </div>
+</div>

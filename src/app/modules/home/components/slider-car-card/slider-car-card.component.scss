@@ -1,0 +1,23 @@
+.car-card-wrapper {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+
+    .card-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-data {
+        padding: 0 10px;
+
+        .info-label {
+            font-size: 16px;
+            color: #5f5f5f;
+        }
+        .info-value {
+            font-size: 16px;
+            color: #000;
+            font-weight: 600;
+        }
+    }
+}

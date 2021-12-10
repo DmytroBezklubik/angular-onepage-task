@@ -1,0 +1,39 @@
+.home-wrapper {
+  display: block;
+  // height: 100%;
+  .menu-slider-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 112px;
+    padding-top: 30px;
+
+    .slider-wrapper {
+      max-width: 84rem;
+      width: 100%;
+      margin: 0 auto;
+      .nav-carousel {
+        margin-top: 25px;
+        width: 100%;
+    
+        .slide-nav {
+          height: 134px;
+          color: #000000;
+          background-color: #ffffff;
+          background-size: 100% 100%;
+          border-radius: 10px;
+          margin: 0 10px;
+          padding: 15px;
+          outline: none;
+    
+          &:hover {
+            opacity: .8;
+            padding: 12px;
+            border: 3px solid #df521a;
+            box-shadow: 5px 5px 5px rgba(10, 30, 25, .2);
+          }
+        }
+      }
+    }
+  
+  }
+}

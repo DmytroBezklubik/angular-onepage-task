@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/car-market",
+    "site": "car-market",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

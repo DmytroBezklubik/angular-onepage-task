@@ -1,0 +1,22 @@
+.root-wrapper {
+  background-color: #f0f0f0;
+  .page-wrapper {
+    display: flex;
+
+    @media only screen and (max-width: 900px) {
+      padding-top: 70px;
+    }
+
+    @media only screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    .page {
+      // width: calc(100% - 300px);
+      width: 100%;
+      max-width: 84rem;
+      margin: 0 auto 100px auto;
+      display: inline-block;
+    }
+  }
+}

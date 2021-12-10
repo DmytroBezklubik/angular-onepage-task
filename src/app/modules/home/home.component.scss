@@ -1,0 +1,33 @@
+.page-location {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+
+  .prev-location {
+    color: #555555;
+    font-size: 18px;
+  }
+  .arrow-right {
+    color: #e1e1e1;
+    padding: 0 20px;
+  }
+  .current-location {
+    color: #000000;
+    font-size: 18px;
+  }
+}
+.cars-list {
+  padding: 40px;
+  margin: 20px 10px;
+  background: #ffffff;
+  .flex-jc-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mt-50 {
+    margin-top: 50px;
+  }
+  .my-20 {
+    margin: 20px 0;
+  }
+}
